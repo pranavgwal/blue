@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCII Magic — Retro-Futuristic Cyberpunk Terminal</title>
+  <meta name="description" content="A retro-futuristic cyberpunk terminal poster experience. Ultra-detailed 1980s-1990s brutalist architecture, living ASCII art, and cryptographic manifesto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,400&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="crt-active scanlines-active">
+  <!-- Audio Context Activation Banner / Ambient Sound Controller -->
+  <header class="cyber-header" id="header">
+    <div class="brand">
+      <span class="status-indicator live-pulse"></span>
+      <span class="brand-text">SYS.ASCII_MAGIC // V2.9</span>
+    </div>
+    <div class="controls-bar">
+      <button id="btn-audio" class="control-btn" title="Toggle 80s Cyberpunk Synth Drone">
+        <span class="btn-icon">🔊</span> <span class="btn-label">AUDIO: OFF</span>
+      </button>
+      <button id="btn-crt" class="control-btn active" title="Toggle CRT Screen Scanlines & Bloom">
+        <span class="btn-icon">📺</span> <span class="btn-label">CRT: ON</span>
+      </button>
+      <button id="btn-matrix" class="control-btn active" title="Toggle Floating ASCII Cloud Overlay">
+        <span class="btn-icon">⚡</span> <span class="btn-label">ASCII: ON</span>
+      </button>
+      <button id="btn-glitch" class="control-btn" title="Trigger Chromatic Glitch">
+        <span class="btn-icon">✨</span> <span class="btn-label">GLITCH</span>
+      </button>
+      <a href="ascii_magic_poster.jpg" download="ASCII_Magic_Cyberpunk_Poster.jpg" class="control-btn download-btn" id="btn-download" title="Download High-Resolution Poster">
+        <span class="btn-icon">⬇</span> <span class="btn-label">DOWNLOAD 8K</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="main-stage">
+    <!-- Interactive 3D Perspective Card Container -->
+    <div class="poster-viewport" id="poster-viewport">
+      <div class="poster-card" id="poster-card">
+        
+        <!-- Live ASCII Stream Canvas Overlay -->
+        <canvas id="ascii-canvas" class="ascii-canvas"></canvas>
+
+        <!-- The Master High-Detail Poster Artwork -->
+        <div class="poster-image-wrapper">
+          <img src="ascii_magic_poster.jpg" alt="ASCII Magic Retro-Futuristic Cyberpunk Poster" class="poster-img" id="poster-image" />
+          <div class="stipple-overlay"></div>
+          <div class="vignette-overlay"></div>
+        </div>
+
+        <!-- Dynamic Beacon Star interactive glow effect -->
+        <div class="star-beacon-flare" id="star-beacon" title="The Digital Beacon"></div>
+
+      </div>
+    </div>
+
+    <!-- Retro Interactive Cyberpunk Terminal Console -->
+    <aside class="terminal-panel" id="terminal-panel">
+      <div class="terminal-header">
+        <div class="window-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="terminal-title">TERMINAL // NODE_0x7F : RECLAIM_STATION</div>
+        <div class="terminal-actions">
+          <span class="terminal-mode">ENC: AES-ASCII</span>
+        </div>
+      </div>
+
+      <div class="terminal-body" id="terminal-output">
+        <div class="term-line prompt-brand">> ASCII MAGIC // DECENTRALIZED PROTOCOL LOADED.</div>
+        <div class="term-line quote-line highlight">> RECLAIM YOUR DATA.</div>
+        <div class="term-line quote-line highlight">> THE CITY IS A SURVEILLANCE MACHINE.</div>
+        <div class="term-line quote-line highlight">> OPT OUT. DECENTRALIZE. WALK TOWARD THE STAR.</div>
+        <div class="term-line info-line">> Mode: Extreme Low-Angle Brutalist Perspective [1980s-1990s]</div>
+        <div class="term-line info-line">> Typography: Serif Monolith + Japanese Cyberpunk Risograph</div>
+        <div class="term-line tip-line">> Type <span class="code-tag">'help'</span> to view available terminal directives.</div>
+      </div>
+
+      <div class="terminal-input-bar">
+        <div class="prompt-symbol">root@beacon:~$&nbsp;</div>
+        <input type="text" id="terminal-input" placeholder="type a command (help, star, matrix, audio, quote)..." autofocus spellcheck="false" autocomplete="off" />
+        <button id="terminal-submit-btn" class="send-btn">EXEC</button>
+      </div>
+
+      <!-- Color Grade Presets -->
+      <div class="palette-bar">
+        <span class="palette-label">COLOR GRADE:</span>
+        <button class="palette-pill active" data-filter="default">ULTRAMARINE</button>
+        <button class="palette-pill" data-filter="phosphor-green">PHOSPHOR GREEN</button>
+        <button class="palette-pill" data-filter="amber-crt">AMBER CRT</button>
+        <button class="palette-pill" data-filter="monochrome-risograph">RISOGRAPH B&W</button>
+        <button class="palette-pill" data-filter="cyber-magenta">NEON CYBER</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- CRT Screen Glare & Scanline Layers -->
+  <div class="crt-overlay pointer-none" aria-hidden="true"></div>
+  <div class="scanlines-layer pointer-none" aria-hidden="true"></div>
+
+  <footer class="cyber-footer">
+    <div class="footer-left">
+      <span>COORDINATES: [00°00'00"N, 00°00'00"E] // ELEVATION: INFINITE</span>
+    </div>
+    <div class="footer-center">
+      <span>WALK TOWARD THE STAR &bull; AUTONOMY THROUGH CODE</span>
+    </div>
+    <div class="footer-right">
+      <span>STATUS: DISCONNECTED FROM SURVEILLANCE GRID</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
