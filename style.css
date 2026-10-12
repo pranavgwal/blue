@@ -79,11 +79,25 @@ body {
 
 .brand-text {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(90, 150, 255, 0.8);
+}
+
+.brand-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 800;
+  background: rgba(255, 204, 0, 0.15);
+  color: #ffd000;
+  border: 1px solid rgba(255, 204, 0, 0.45);
+  padding: 0.18rem 0.5rem;
+  border-radius: 3px;
   letter-spacing: 0.15em;
-  color: #dbe4ff;
-  text-shadow: 0 0 8px rgba(90, 140, 255, 0.6);
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+  text-transform: uppercase;
 }
 
 .controls-bar {
@@ -136,6 +150,92 @@ body {
 .download-btn:hover {
   background: linear-gradient(135deg, rgba(40, 110, 255, 1), rgba(15, 60, 180, 1));
   box-shadow: 0 0 16px rgba(60, 140, 255, 0.6);
+}
+
+/* ==================== TOP HERO SECTION ==================== */
+.top-hero-section {
+  text-align: center;
+  padding: 1.4rem 1rem 0.4rem 1rem;
+  position: relative;
+  z-index: 20;
+}
+
+.top-hero-container {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-prefix {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  color: #7294e8;
+  margin-bottom: 0.15rem;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.hero-name {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.05;
+  text-shadow: 
+    0 0 15px rgba(100, 160, 255, 0.8),
+    0 0 40px rgba(30, 80, 220, 0.6),
+    0 3px 6px rgba(0, 0, 0, 0.9);
+  margin: 0;
+}
+
+.hero-batman-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 640px;
+  margin: 0.5rem 0 0.35rem 0;
+  gap: 1.2rem;
+}
+
+.line-wing {
+  flex: 1;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(255, 204, 0, 0.7) 40%, rgba(255, 255, 255, 0.95));
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+  border-radius: 2px;
+}
+
+.line-wing.right {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 204, 0, 0.7) 60%, transparent);
+}
+
+.batman-text {
+  font-family: var(--font-mono);
+  font-size: clamp(1.2rem, 2.8vw, 1.75rem);
+  font-weight: 900;
+  letter-spacing: 0.4em;
+  color: #ffd000;
+  text-shadow: 
+    0 0 14px rgba(255, 208, 0, 0.9),
+    0 0 35px rgba(255, 160, 0, 0.6),
+    0 2px 4px rgba(0, 0, 0, 0.8);
+  padding: 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  color: #8da4d8;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
 }
 
 /* ==================== MAIN STAGE ==================== */

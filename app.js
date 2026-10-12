@@ -317,6 +317,15 @@ document.addEventListener('DOMContentLoaded', () => {
         printTerminal("> OPT OUT. DECENTRALIZE. WALK TOWARD THE STAR.", 'quote-line highlight');
         break;
 
+      case 'batman':
+      case 'manan':
+      case 'dark knight':
+        printTerminal(">> [AUTHENTICATED] ACCESS LEVEL: BATCAVE OVERRIDE.", 'quote-line highlight');
+        printTerminal(">> AGENT: MANAN // THE BATMAN");
+        printTerminal(">> \"IT'S NOT WHO I AM UNDERNEATH, BUT WHAT I DO THAT DEFINES ME.\"");
+        triggerGlitch();
+        break;
+
       case 'star':
       case 'beacon':
         printTerminal(">> TARGET LOCKED: BEACON STAR ALPHA-01.");
